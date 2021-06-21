@@ -1,6 +1,6 @@
 // == Import npm
 import React from 'react';
-import { Input } from 'semantic-ui-react';
+import { Icon, Input } from 'semantic-ui-react';
 import Proptypes from 'prop-types';
 
 // == Import
@@ -8,10 +8,17 @@ import './styles.css';
 
 
 // == Composant
-const SearchBar = ({props}) => (
-  <Input placeholder='Search...' />
+const SearchBar = (props) => (
+  <div>
+    {console.log(props)}
+    <Input icon placeholder='Search...'>
+      <input />
+      <Icon name='search' />
+    </Input>
+  </div>
 );
 
+//Proptypes
 SearchBar.proptypes = {
   Input: Proptypes.string.isRequired
 }
