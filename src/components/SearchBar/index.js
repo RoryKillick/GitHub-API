@@ -1,6 +1,6 @@
 // == Import npm
 import React from 'react';
-import { Icon, Input } from 'semantic-ui-react';
+import { Button,Icon, Input } from 'semantic-ui-react';
 import Proptypes from 'prop-types';
 
 // == Import
@@ -12,6 +12,7 @@ const SearchBar = (props) => (
   <div>
     {console.log(props)}
     <Input icon placeholder='Search...'>
+      <Button>Click Here</Button>
       <input />
       <Icon name='search' />
     </Input>

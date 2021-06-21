@@ -14,11 +14,13 @@ import GitHubImage from 'src/components/GitHubImage';
 // == Composant
 const App = () => {
 
-  /* const fetchRepos = () => {
+  //Fonctions
+
+  const fetchRepos = () => {
     console.log('Repos fetched!!');
 
     setLoading(true);
-
+    
     axios({
       method: 'get',
       url: 'https://api.github.com/search/repositories?q=react',
@@ -33,13 +35,29 @@ const App = () => {
     .finally(() => {
       setLoading(false);
     })
-  } */
+  }
+
+  // Pas trop compris ici, le handle Input Change:
+  const handleInputChange = (e) => (
+    e.preventDefault()
+  )
+
+
+  const handleInputSubmit = () => (
+    setOnInputSubmit(!onInputSubmit)
+  )
 
   //Hooks
-  /* const [loading, setLoading] = useState(false);
-  const [repos, setRepos] = useState([]); */
+  const [loading, setLoading] = useState(false);
+  const [repos, setRepos] = useState(['freeCodeCamp','React','React-native','create-react-app']);
+  const [nbResults, setNbResults] = useState(5);
+  const [searchInputValue, setSearchInputValue] = useState('React');
+  const [onInputSubmit, setOnInputSubmit] = useState(false);
+  // Pas trop compris ici:
+  const [onInputChange, setOnInputChange] = useState(false);
 
   //UseEffect
+  //Erreur lors du loading, list.map is not defined
   /* useEffect(fetchRepos, []); */
 
 
@@ -48,15 +66,15 @@ const App = () => {
     <div className="app">
       <GitHubImage/>
       <SearchBar
-        searchInputValue={'React'}
-        /* onChange={} */
-        /* onSubmit={true} */
+        searchInputValue={searchInputValue}
+        onInputChange={handleInputChange}
+        onInputSubmit={handleInputSubmit}
       />
       <Message
-        nbResults={5}
+        nbResults={nbResults}
       />
       <ReposResults
-        list={[1,2,3,4,5,6,7]}
+        list={repos}
       />
     </div>
   )

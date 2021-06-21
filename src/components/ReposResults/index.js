@@ -25,7 +25,7 @@ const ReposResults = ({list}) => (
 //Proptypes
 ReposResults.proptypes = {
   list: Proptypes.arrayOf(Proptypes.shape({
-    name: Proptypes.number,
+    name: Proptypes.string,
     index: Proptypes.number
   })),
 };
