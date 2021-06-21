@@ -5,21 +5,23 @@ import Proptypes from 'prop-types';
 
 
 // == Import
-import './styles.css';
+import './styles.scss';
 
 
 // == Composant
 const ReposResults = ({list}) => (
-<ul>
-  {
-    list.map((name, index) => (
-      <Card
-        key={index}
-        header={name}
-      />
-    ))
-  }
-</ul>
+<div className="container">
+  <ul className="list">
+    {
+      list.map((name, index) => (
+        <Card
+          key={index}
+          header={name}
+        />
+      ))
+    }
+  </ul>
+</div>
 );
 
 //Proptypes

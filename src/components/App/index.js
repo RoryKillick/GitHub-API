@@ -1,9 +1,10 @@
 // == Import npm
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import 'semantic-ui-css/semantic.min.css';
 
 // == Import
-import './styles.css';
+import './styles.scss';
 import SearchBar from 'src/components/SearchBar';
 import Message from 'src/components/Message';
 import ReposResults from 'src/components/ReposResults';

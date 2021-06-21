@@ -5,16 +5,16 @@ import Proptypes from 'prop-types';
 
 
 // == Import
-import './styles.css';
+import './styles.scss';
 
 // == Composant
 const Message = (props) => (
-  <Container text>
-    <Segment>
+  <Segment>
+      <Container text>
       {console.log(props)}
       Resultats
-    </Segment>
-  </Container>
+      </Container>
+  </Segment>
 );
 
 

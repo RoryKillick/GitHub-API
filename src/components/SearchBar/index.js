@@ -1,21 +1,22 @@
 // == Import npm
 import React from 'react';
-import { Button,Icon, Input } from 'semantic-ui-react';
+import { Icon, Input, Segment } from 'semantic-ui-react';
 import Proptypes from 'prop-types';
 
 // == Import
-import './styles.css';
+import './styles.scss';
 
 
 // == Composant
 const SearchBar = (props) => (
   <div>
     {console.log(props)}
-    <Input icon placeholder='Search...'>
-      <Button>Click Here</Button>
-      <input />
-      <Icon name='search' />
-    </Input>
+    <Segment>
+      <Input className='input'icon fluid placeholder='Search...' iconPosition='left'>
+        <input />
+        <Icon name='search' />
+      </Input>
+    </Segment>
   </div>
 );
 
