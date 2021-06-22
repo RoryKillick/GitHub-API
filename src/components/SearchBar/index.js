@@ -1,6 +1,6 @@
 // == Import npm
 import React from 'react';
-import { Icon, Input, Segment } from 'semantic-ui-react';
+import { Icon, Form, Input, Segment } from 'semantic-ui-react';
 import Proptypes from 'prop-types';
 
 // == Import
@@ -12,10 +12,18 @@ const SearchBar = (props) => (
   <div>
     {console.log(props)}
     <Segment>
-      <Input className='input'icon fluid placeholder='Search...' iconPosition='left'>
-        <input />
-        <Icon name='search' />
-      </Input>
+      <Form.Input className='input' 
+        icon='search'
+        fluid 
+        placeholder='Search...'
+        value={searchText}
+        loading={loading}
+        iconPosition='left'
+        onInputChange={(evt) => {
+          const textSaisie = evt.target.value;
+          onInputChange(textSaisie);
+        }}
+      />
     </Segment>
   </div>
 );

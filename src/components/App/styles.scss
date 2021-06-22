@@ -1,6 +1,11 @@
+html body {
+  background-color: aqua;
+  //colour degeulasse pour voir "html body"
+}
+
 .app {
   width: 90vh;
-  margin: 1em auto;
+  margin: 0 auto;
   text-align: center;
   background-color: #FFFFFF;
   display: flex;
