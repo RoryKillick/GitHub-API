@@ -1,1 +1,1 @@
-Projet utiliser avec l'API de github
+Projet utilisé avec l'API de github
